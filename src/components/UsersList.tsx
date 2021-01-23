@@ -5,6 +5,8 @@ import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 
+import CustomizedTables from './UsersTable'; 
+
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
@@ -58,11 +60,13 @@ export default function UsersList() {
                     id="invisible" 
                     label="" 
                     variant="filled"/>  
-                </div>
-                
+                </div>                
             </div>
+            <List component="nav" className={classes.root} aria-label="mailbox folders">          
+              <Divider />
+            </List>
             <div className="users-list">
-
+              <CustomizedTables />
             </div>
             <List component="nav" className={classes.root} aria-label="mailbox folders">          
               <Divider />

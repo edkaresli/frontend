@@ -30,14 +30,17 @@ export default function NavBar() {
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar>
-          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+        <Button color="inherit"><Link to='/userslist' style={{textDecoration: "none", color: "white"}}>Users</Link></Button>
+          {/* <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
             <MenuIcon />
-          </IconButton>
+          </IconButton> */}
+          
           <Typography variant="h6" className={classes.title}>
-            News
+            Current user: Guest
           </Typography>
-          {/*<Button color="inherit">Login</Button>*/}
-          <Link to='/login'>Login</Link>
+          <Button color="inherit"><Link to='/login' style={{textDecoration: "none", color: "white"}}>Login</Link></Button>
+       
+          {/* <Link to='/login'>Login</Link> */}
         </Toolbar>
       </AppBar>
     </div>
