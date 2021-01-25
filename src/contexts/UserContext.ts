@@ -1,8 +1,15 @@
 import React, { createContext } from 'react';
-import User from '../interfaces/User';
+import { LoggedUser } from '../interfaces/User';
 
+const loggedUser: LoggedUser = new LoggedUser('', '');
 
-export const UserContext = createContext<User>({ firstName: "", lastName: "", email: ""});
+export type LoggedUserType = {
+    email: string;
+    accessToken: string;
+    // setLoggedUser: React.Dispatch<React.SetStateAction<LoggedUser>>; //(e: string, a: string) => void;
+}
+
+export const LoggedUserContext = createContext<LoggedUserType>({email: '', accessToken: ''});
 
 
 

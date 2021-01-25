@@ -7,11 +7,18 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import UpdateDialogProps from '../interfaces/UpdateDialogProps';
-import User from '../interfaces/User';
+import { User } from '../interfaces/User';
+
+// interface Update {
+//   id: string;
+//   firstName: string;
+//   lastName: string;
+//   password: string;
+// }
 
 export default function UpdateUser(props: UpdateDialogProps) {
   const [open, setOpen] = React.useState(false);
-    
+  
   const handleClickOpen = () => {
     setOpen(true);
   };
@@ -37,7 +44,7 @@ export default function UpdateUser(props: UpdateDialogProps) {
                 id="updateFirstName"
                 label="First name"
                 type="text"
-                fullWidth
+                fullWidth                
             />
             <TextField
                 autoFocus
@@ -65,12 +72,12 @@ export default function UpdateUser(props: UpdateDialogProps) {
             />
             </DialogContent>
             <DialogActions>
-            <Button onClick={handleClose} color="default">
-                Cancel
-            </Button>
-            <Button onClick={handleClose} color="primary">
-                Update
-            </Button>
+                <Button onClick={handleClose} color="default">
+                    Cancel
+                </Button>
+                <Button onClick={handleClose} color="primary">
+                    Update
+                </Button>
             </DialogActions>
           </Dialog>  
         </div>
